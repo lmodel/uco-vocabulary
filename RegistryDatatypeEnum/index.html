@@ -316,6 +316,7 @@
 
 
 <h1 id="enum-registrydatatypeenum">Enum: RegistryDatatypeEnum</h1>
+<p><em>"From https //learn.microsoft.com/en-us/windows/win32/sysinfo/registry-value-types, https //learn.microsoft.com/en-us/windows/win32/shell/hkey-type"</em></p>
 <p>URI: <a href="RegistryDatatypeEnum">RegistryDatatypeEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -330,67 +331,67 @@
 <tr>
 <td>reg_binary</td>
 <td>None</td>
-<td></td>
+<td>"Binary data in any form</td>
 </tr>
 <tr>
 <td>reg_dword</td>
 <td>None</td>
-<td></td>
+<td>"A 32-bit number</td>
 </tr>
 <tr>
 <td>reg_dword_big_endian</td>
 <td>None</td>
-<td></td>
+<td>"A 32-bit number in big-endian format</td>
 </tr>
 <tr>
 <td>reg_expand_sz</td>
 <td>None</td>
-<td></td>
+<td>"A null-terminated string that contains unexpanded references to environment ...</td>
 </tr>
 <tr>
 <td>reg_full_resource_descriptor</td>
 <td>None</td>
-<td></td>
+<td>"A list of hardware resources that a physical device is using, detected and w...</td>
 </tr>
 <tr>
 <td>reg_invalid_type</td>
 <td>None</td>
-<td></td>
+<td>"Specifies an invalid key</td>
 </tr>
 <tr>
 <td>reg_link</td>
 <td>None</td>
-<td></td>
+<td>"A null-terminated Unicode string that contains the target path of a symboli ...</td>
 </tr>
 <tr>
 <td>reg_multi_sz</td>
 <td>None</td>
-<td></td>
+<td>"A sequence of null-terminated strings, terminated by an empty string (\0)</td>
 </tr>
 <tr>
 <td>reg_none</td>
 <td>None</td>
-<td></td>
+<td>"No defined value type</td>
 </tr>
 <tr>
 <td>reg_qword</td>
 <td>None</td>
-<td></td>
+<td>"A 64-bit number</td>
 </tr>
 <tr>
 <td>reg_resource_list</td>
 <td>None</td>
-<td></td>
+<td>"Device-driver resource list</td>
 </tr>
 <tr>
 <td>reg_resource_requirements_list</td>
 <td>None</td>
-<td></td>
+<td>"A device driver's list of possible hardware resources it or one of the physi...</td>
 </tr>
 <tr>
 <td>reg_sz</td>
 <td>None</td>
-<td></td>
+<td>"A null-terminated string</td>
 </tr>
 </tbody>
 </table>
@@ -418,35 +419,64 @@
 <details>
 
 <pre><code class="language-yaml">name: RegistryDatatypeEnum
+description: '&quot;From https //learn.microsoft.com/en-us/windows/win32/sysinfo/registry-value-types,
+  https //learn.microsoft.com/en-us/windows/win32/shell/hkey-type&quot;'
 from_schema: https://w3id.org/lmodel/ucolink-vocabulary
 rank: 1000
 permissible_values:
   reg_binary:
     text: reg_binary
+    description: '&quot;Binary data in any form.&quot;'
   reg_dword:
     text: reg_dword
+    description: '&quot;A 32-bit number.&quot;'
   reg_dword_big_endian:
     text: reg_dword_big_endian
+    description: '&quot;A 32-bit number in big-endian format. Some UNIX systems support
+      big-endian architectures.&quot;'
   reg_expand_sz:
     text: reg_expand_sz
+    description: '&quot;A null-terminated string that contains unexpanded references to
+      environment Variables (for example, ''%PATH%''). It will be a Unicode or ANSI
+      string depending on wh ether you use the Unicode or ANSI functions. To expand
+      the environment variable refere nces, use the ExpandEnvironmentStrings function.&quot;'
   reg_full_resource_descriptor:
     text: reg_full_resource_descriptor
+    description: '&quot;A list of hardware resources that a physical device is using, detected
+      and written into the \HardwareDescription tree by the system.&quot;'
   reg_invalid_type:
     text: reg_invalid_type
+    description: '&quot;Specifies an invalid key.&quot;'
   reg_link:
     text: reg_link
+    description: '&quot;A null-terminated Unicode string that contains the target path
+      of a symboli c link that was created by calling the RegCreateKeyEx function
+      with REG_OPTION_CREATE_ LINK.&quot;'
   reg_multi_sz:
     text: reg_multi_sz
+    description: '&quot;A sequence of null-terminated strings, terminated by an empty string
+      (\0). The following is an example: String1\0String2\0String3\0LastString\0\0
+      The first \0 terminates the first string, the second to the last \0 terminates
+      the last string, and the final \0 terminates the sequence. Note that the final
+      terminator must be factored into the length of the string.&quot;'
   reg_none:
     text: reg_none
+    description: '&quot;No defined value type.&quot;'
   reg_qword:
     text: reg_qword
+    description: '&quot;A 64-bit number.&quot;'
   reg_resource_list:
     text: reg_resource_list
+    description: '&quot;Device-driver resource list.&quot;'
   reg_resource_requirements_list:
     text: reg_resource_requirements_list
+    description: '&quot;A device driver''s list of possible hardware resources it or one
+      of the physical devices it controls can use, from which the system writes a
+      subset into the \ResourceMap tree&quot;'
   reg_sz:
     text: reg_sz
+    description: '&quot;A null-terminated string. This will be either a Unicode or an ANSI
+      string, depending on whether you use the Unicode or ANSI functions.&quot;'
 
 </code></pre>
 
