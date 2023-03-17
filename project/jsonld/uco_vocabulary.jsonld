@@ -1,0 +1,3613 @@
+{
+  "name": "ucolink-vocabulary",
+  "description": "",
+  "title": "UCO Vocabulary",
+  "id": "https://w3id.org/lmodel/ucolink-vocabulary",
+  "version": "1.1.0",
+  "imports": [
+    "linkml:types"
+  ],
+  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "prefixes": [
+    {
+      "prefix_prefix": "linkml",
+      "prefix_reference": "https://w3id.org/linkml/"
+    },
+    {
+      "prefix_prefix": "lm_core",
+      "prefix_reference": "https://w3id.org/lmodel/core/"
+    },
+    {
+      "prefix_prefix": "vocabulary",
+      "prefix_reference": "https://w3id.org/lmodel/uco-vocabulary/"
+    },
+    {
+      "prefix_prefix": "schema_core",
+      "prefix_reference": "https://w3id.org/lmodel/uco-core/schema/"
+    }
+  ],
+  "default_prefix": "vocabulary",
+  "default_range": "string",
+  "types": [
+    {
+      "name": "string",
+      "definition_uri": "https://w3id.org/linkml/String",
+      "description": "A character string",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Text"
+      ],
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "integer",
+      "definition_uri": "https://w3id.org/linkml/Integer",
+      "description": "An integer",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Integer"
+      ],
+      "base": "int",
+      "uri": "http://www.w3.org/2001/XMLSchema#integer",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "boolean",
+      "definition_uri": "https://w3id.org/linkml/Boolean",
+      "description": "A binary (true or false) value",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Boolean"
+      ],
+      "base": "Bool",
+      "uri": "http://www.w3.org/2001/XMLSchema#boolean",
+      "repr": "bool",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "float",
+      "definition_uri": "https://w3id.org/linkml/Float",
+      "description": "A real number that conforms to the xsd:float specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#float",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "double",
+      "definition_uri": "https://w3id.org/linkml/Double",
+      "description": "A real number that conforms to the xsd:double specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#double",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "decimal",
+      "definition_uri": "https://w3id.org/linkml/Decimal",
+      "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "broad_mappings": [
+        "schema:Number"
+      ],
+      "base": "Decimal",
+      "uri": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "time",
+      "definition_uri": "https://w3id.org/linkml/Time",
+      "description": "A time object represents a (local) time of day, independent of any particular day",
+      "notes": [
+        "URI is dateTime because OWL reasoners do not work with straight date or time"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Time"
+      ],
+      "base": "XSDTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date",
+      "definition_uri": "https://w3id.org/linkml/Date",
+      "description": "a date (year, month and day) in an idealized calendar",
+      "notes": [
+        "URI is dateTime because OWL reasoners don't work with straight date or time"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Date"
+      ],
+      "base": "XSDDate",
+      "uri": "http://www.w3.org/2001/XMLSchema#date",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "datetime",
+      "definition_uri": "https://w3id.org/linkml/Datetime",
+      "description": "The combination of a date and time",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:DateTime"
+      ],
+      "base": "XSDDateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date_or_datetime",
+      "definition_uri": "https://w3id.org/linkml/DateOrDatetime",
+      "description": "Either a date or a datetime",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "https://w3id.org/linkml/DateOrDatetime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uriorcurie",
+      "definition_uri": "https://w3id.org/linkml/Uriorcurie",
+      "description": "a URI or a CURIE",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "curie",
+      "definition_uri": "https://w3id.org/linkml/Curie",
+      "conforms_to": "https://www.w3.org/TR/curie/",
+      "description": "a compact URI",
+      "comments": [
+        "in RDF serializations this MUST be expanded to a URI",
+        "in non-RDF serializations MAY be serialized as the compact representation"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "Curie",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uri",
+      "definition_uri": "https://w3id.org/linkml/Uri",
+      "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
+      "description": "a complete URI",
+      "comments": [
+        "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:URL"
+      ],
+      "base": "URI",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "ncname",
+      "definition_uri": "https://w3id.org/linkml/Ncname",
+      "description": "Prefix part of CURIE",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NCName",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "objectidentifier",
+      "definition_uri": "https://w3id.org/linkml/Objectidentifier",
+      "description": "A URI or CURIE that represents an object in the model.",
+      "comments": [
+        "Used for inheritence and type checking"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "ElementIdentifier",
+      "uri": "http://www.w3.org/ns/shex#iri",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "nodeidentifier",
+      "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
+      "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NodeIdentifier",
+      "uri": "http://www.w3.org/ns/shex#nonLiteral",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    }
+  ],
+  "enums": [
+    {
+      "name": "AccountTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/AccountTypeEnum",
+      "description": "\"An account type represents the endpoint type where the account is located; for example, ADS for an ActiveDirectory endpoint type, or LDAP for an LDAP, etc.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "ldap"
+        },
+        {
+          "text": "nis"
+        },
+        {
+          "text": "openid"
+        },
+        {
+          "text": "radius"
+        },
+        {
+          "text": "tacacs"
+        },
+        {
+          "text": "unix"
+        },
+        {
+          "text": "windows_domain"
+        },
+        {
+          "text": "windows_local"
+        }
+      ]
+    },
+    {
+      "name": "ActionArgumentNameEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionArgumentNameEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "APC Address"
+        },
+        {
+          "text": "APC Mode"
+        },
+        {
+          "text": "API"
+        },
+        {
+          "text": "Access Mode"
+        },
+        {
+          "text": "Application Name"
+        },
+        {
+          "text": "Base Address"
+        },
+        {
+          "text": "Callback Address"
+        },
+        {
+          "text": "Code Address"
+        },
+        {
+          "text": "Command"
+        },
+        {
+          "text": "Control Code"
+        },
+        {
+          "text": "Control Parameter"
+        },
+        {
+          "text": "Creation Flags"
+        },
+        {
+          "text": "Database Name"
+        },
+        {
+          "text": "Delay Time (ms)"
+        },
+        {
+          "text": "Destination Address"
+        },
+        {
+          "text": "Error Control"
+        },
+        {
+          "text": "File Information Class"
+        },
+        {
+          "text": "Flags"
+        },
+        {
+          "text": "Function Address"
+        },
+        {
+          "text": "Function Name"
+        },
+        {
+          "text": "Function Ordinal"
+        },
+        {
+          "text": "Hook Type"
+        },
+        {
+          "text": "Host Name"
+        },
+        {
+          "text": "Hostname"
+        },
+        {
+          "text": "Initial Owner"
+        },
+        {
+          "text": "Mapping Offset"
+        },
+        {
+          "text": "Number of Bytes Per Send"
+        },
+        {
+          "text": "Options"
+        },
+        {
+          "text": "Parameter Address"
+        },
+        {
+          "text": "Password"
+        },
+        {
+          "text": "Privilege Name"
+        },
+        {
+          "text": "Protection"
+        },
+        {
+          "text": "Proxy Bypass"
+        },
+        {
+          "text": "Proxy Name"
+        },
+        {
+          "text": "Reason"
+        },
+        {
+          "text": "Request Size"
+        },
+        {
+          "text": "Requested Version"
+        },
+        {
+          "text": "Server"
+        },
+        {
+          "text": "Service Name"
+        },
+        {
+          "text": "Service State"
+        },
+        {
+          "text": "Service Type"
+        },
+        {
+          "text": "Share Mode"
+        },
+        {
+          "text": "Shutdown Flag"
+        },
+        {
+          "text": "Size (bytes)"
+        },
+        {
+          "text": "Sleep Time (ms)"
+        },
+        {
+          "text": "Source Address"
+        },
+        {
+          "text": "Starting Address"
+        },
+        {
+          "text": "System Metric Index"
+        },
+        {
+          "text": "Target PID"
+        },
+        {
+          "text": "Transfer Flags"
+        },
+        {
+          "text": "Username"
+        }
+      ]
+    },
+    {
+      "name": "ActionNameEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionNameEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Accept Socket Connection"
+        },
+        {
+          "text": "Add Connection to Network Share"
+        },
+        {
+          "text": "Add Network Share"
+        },
+        {
+          "text": "Add Scheduled Task"
+        },
+        {
+          "text": "Add System Call Hook"
+        },
+        {
+          "text": "Add User"
+        },
+        {
+          "text": "Add Windows Hook"
+        },
+        {
+          "text": "Allocate Virtual Memory in Process"
+        },
+        {
+          "text": "Bind Address to Socket"
+        },
+        {
+          "text": "Change Service Configuration"
+        },
+        {
+          "text": "Check for Remote Debugger"
+        },
+        {
+          "text": "Close Port"
+        },
+        {
+          "text": "Close Registry Key"
+        },
+        {
+          "text": "Close Socket"
+        },
+        {
+          "text": "Configure Service"
+        },
+        {
+          "text": "Connect to IP"
+        },
+        {
+          "text": "Connect to Named Pipe"
+        },
+        {
+          "text": "Connect to Network Share"
+        },
+        {
+          "text": "Connect to Socket"
+        },
+        {
+          "text": "Connect to URL"
+        },
+        {
+          "text": "Control Driver"
+        },
+        {
+          "text": "Control Service"
+        },
+        {
+          "text": "Copy File"
+        },
+        {
+          "text": "Create Dialog Box"
+        },
+        {
+          "text": "Create Directory"
+        },
+        {
+          "text": "Create Event"
+        },
+        {
+          "text": "Create File"
+        },
+        {
+          "text": "Create File Alternate Data Stream"
+        },
+        {
+          "text": "Create File Mapping"
+        },
+        {
+          "text": "Create File Symbolic Link"
+        },
+        {
+          "text": "Create Hidden File"
+        },
+        {
+          "text": "Create Mailslot"
+        },
+        {
+          "text": "Create Module"
+        },
+        {
+          "text": "Create Mutex"
+        },
+        {
+          "text": "Create Named Pipe"
+        },
+        {
+          "text": "Create Process"
+        },
+        {
+          "text": "Create Process as User"
+        },
+        {
+          "text": "Create Registry Key"
+        },
+        {
+          "text": "Create Registry Key Value"
+        },
+        {
+          "text": "Create Remote Thread in Process"
+        },
+        {
+          "text": "Create Service"
+        },
+        {
+          "text": "Create Socket"
+        },
+        {
+          "text": "Create Symbolic Link"
+        },
+        {
+          "text": "Create Thread"
+        },
+        {
+          "text": "Create Window"
+        },
+        {
+          "text": "Delete Directory"
+        },
+        {
+          "text": "Delete File"
+        },
+        {
+          "text": "Delete Named Pipe"
+        },
+        {
+          "text": "Delete Network Share"
+        },
+        {
+          "text": "Delete Registry Key"
+        },
+        {
+          "text": "Delete Registry Key Value"
+        },
+        {
+          "text": "Delete Service"
+        },
+        {
+          "text": "Delete User"
+        },
+        {
+          "text": "Disconnect from Named Pipe"
+        },
+        {
+          "text": "Disconnect from Network Share"
+        },
+        {
+          "text": "Disconnect from Socket"
+        },
+        {
+          "text": "Download File"
+        },
+        {
+          "text": "Enumerate DLLs"
+        },
+        {
+          "text": "Enumerate Network Shares"
+        },
+        {
+          "text": "Enumerate Processes"
+        },
+        {
+          "text": "Enumerate Protocols"
+        },
+        {
+          "text": "Enumerate Registry Key Subkeys"
+        },
+        {
+          "text": "Enumerate Registry Key Values"
+        },
+        {
+          "text": "Enumerate Services"
+        },
+        {
+          "text": "Enumerate System Handles"
+        },
+        {
+          "text": "Enumerate Threads"
+        },
+        {
+          "text": "Enumerate Threads in Process"
+        },
+        {
+          "text": "Enumerate Users"
+        },
+        {
+          "text": "Enumerate Windows"
+        },
+        {
+          "text": "Find File"
+        },
+        {
+          "text": "Find Window"
+        },
+        {
+          "text": "Flush Process Instruction Cache"
+        },
+        {
+          "text": "Free Library"
+        },
+        {
+          "text": "Free Process Virtual Memory"
+        },
+        {
+          "text": "Get Disk Free Space"
+        },
+        {
+          "text": "Get Disk Type"
+        },
+        {
+          "text": "Get Elapsed System Up Time"
+        },
+        {
+          "text": "Get File Attributes"
+        },
+        {
+          "text": "Get Function Address"
+        },
+        {
+          "text": "Get Host By Address"
+        },
+        {
+          "text": "Get Host By Name"
+        },
+        {
+          "text": "Get Host Name"
+        },
+        {
+          "text": "Get Library File Name"
+        },
+        {
+          "text": "Get Library Handle"
+        },
+        {
+          "text": "Get NetBIOS Name"
+        },
+        {
+          "text": "Get Process Current Directory"
+        },
+        {
+          "text": "Get Process Environment Variable"
+        },
+        {
+          "text": "Get Process Startup Information"
+        },
+        {
+          "text": "Get Processes Snapshot"
+        },
+        {
+          "text": "Get Registry Key Attributes"
+        },
+        {
+          "text": "Get Service Status"
+        },
+        {
+          "text": "Get System Global Flags"
+        },
+        {
+          "text": "Get System Host Name"
+        },
+        {
+          "text": "Get System Local Time"
+        },
+        {
+          "text": "Get System NetBIOS Name"
+        },
+        {
+          "text": "Get System Network Parameters"
+        },
+        {
+          "text": "Get System Time"
+        },
+        {
+          "text": "Get Thread Context"
+        },
+        {
+          "text": "Get Thread Username"
+        },
+        {
+          "text": "Get User Attributes"
+        },
+        {
+          "text": "Get Username"
+        },
+        {
+          "text": "Get Windows Directory"
+        },
+        {
+          "text": "Get Windows System Directory"
+        },
+        {
+          "text": "Get Windows Temporary Files Directory"
+        },
+        {
+          "text": "Hide Window"
+        },
+        {
+          "text": "Impersonate Process"
+        },
+        {
+          "text": "Impersonate Thread"
+        },
+        {
+          "text": "Inject Memory Page"
+        },
+        {
+          "text": "Kill Process"
+        },
+        {
+          "text": "Kill Thread"
+        },
+        {
+          "text": "Kill Window"
+        },
+        {
+          "text": "Listen on Port"
+        },
+        {
+          "text": "Listen on Socket"
+        },
+        {
+          "text": "Load Driver"
+        },
+        {
+          "text": "Load Library"
+        },
+        {
+          "text": "Load Module"
+        },
+        {
+          "text": "Load and Call Driver"
+        },
+        {
+          "text": "Lock File"
+        },
+        {
+          "text": "Logon as User"
+        },
+        {
+          "text": "Map File"
+        },
+        {
+          "text": "Map Library"
+        },
+        {
+          "text": "Map View of File"
+        },
+        {
+          "text": "Modify File"
+        },
+        {
+          "text": "Modify Named Pipe"
+        },
+        {
+          "text": "Modify Process"
+        },
+        {
+          "text": "Modify Registry Key"
+        },
+        {
+          "text": "Modify Registry Key Value"
+        },
+        {
+          "text": "Modify Service"
+        },
+        {
+          "text": "Monitor Registry Key"
+        },
+        {
+          "text": "Move File"
+        },
+        {
+          "text": "Open File"
+        },
+        {
+          "text": "Open File Mapping"
+        },
+        {
+          "text": "Open Mutex"
+        },
+        {
+          "text": "Open Port"
+        },
+        {
+          "text": "Open Process"
+        },
+        {
+          "text": "Open Registry Key"
+        },
+        {
+          "text": "Open Service"
+        },
+        {
+          "text": "Open Service Control Manager"
+        },
+        {
+          "text": "Protect Virtual Memory"
+        },
+        {
+          "text": "Query DNS"
+        },
+        {
+          "text": "Query Disk Attributes"
+        },
+        {
+          "text": "Query Process Virtual Memory"
+        },
+        {
+          "text": "Queue APC in Thread"
+        },
+        {
+          "text": "Read File"
+        },
+        {
+          "text": "Read From Named Pipe"
+        },
+        {
+          "text": "Read From Process Memory"
+        },
+        {
+          "text": "Read Registry Key Value"
+        },
+        {
+          "text": "Receive Data on Socket"
+        },
+        {
+          "text": "Receive Email Message"
+        },
+        {
+          "text": "Release Mutex"
+        },
+        {
+          "text": "Rename File"
+        },
+        {
+          "text": "Revert Thread to Self"
+        },
+        {
+          "text": "Send Control Code to File"
+        },
+        {
+          "text": "Send Control Code to Pipe"
+        },
+        {
+          "text": "Send Control Code to Service"
+        },
+        {
+          "text": "Send DNS Query"
+        },
+        {
+          "text": "Send Data on Socket"
+        },
+        {
+          "text": "Send Data to Address on Socket"
+        },
+        {
+          "text": "Send Email Message"
+        },
+        {
+          "text": "Send ICMP Request"
+        },
+        {
+          "text": "Send Reverse DNS Query"
+        },
+        {
+          "text": "Set File Attributes"
+        },
+        {
+          "text": "Set NetBIOS Name"
+        },
+        {
+          "text": "Set Process Current Directory"
+        },
+        {
+          "text": "Set Process Environment Variable"
+        },
+        {
+          "text": "Set System Global Flags"
+        },
+        {
+          "text": "Set System Host Name"
+        },
+        {
+          "text": "Set System Time"
+        },
+        {
+          "text": "Set Thread Context"
+        },
+        {
+          "text": "Show Window"
+        },
+        {
+          "text": "Shutdown System"
+        },
+        {
+          "text": "Sleep Process"
+        },
+        {
+          "text": "Sleep System"
+        },
+        {
+          "text": "Start Service"
+        },
+        {
+          "text": "Unload Driver"
+        },
+        {
+          "text": "Unload Module"
+        },
+        {
+          "text": "Unlock File"
+        },
+        {
+          "text": "Unmap File"
+        },
+        {
+          "text": "Upload File"
+        },
+        {
+          "text": "Write to File"
+        },
+        {
+          "text": "Write to Process Virtual Memory"
+        }
+      ]
+    },
+    {
+      "name": "ActionRelationshipTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionRelationshipTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Dependent_On"
+        },
+        {
+          "text": "Equivalent_To"
+        },
+        {
+          "text": "Followed_By"
+        },
+        {
+          "text": "Initiated"
+        },
+        {
+          "text": "Initiated_By"
+        },
+        {
+          "text": "Preceded_By"
+        },
+        {
+          "text": "Related_To"
+        }
+      ]
+    },
+    {
+      "name": "ActionStatusTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionStatusTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Complete/Finish"
+        },
+        {
+          "text": "Error"
+        },
+        {
+          "text": "Fail"
+        },
+        {
+          "text": "Ongoing"
+        },
+        {
+          "text": "Pending"
+        },
+        {
+          "text": "Success"
+        },
+        {
+          "text": "Unknown"
+        }
+      ]
+    },
+    {
+      "name": "ActionTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Accept"
+        },
+        {
+          "text": "Access"
+        },
+        {
+          "text": "Add"
+        },
+        {
+          "text": "Alert"
+        },
+        {
+          "text": "Allocate"
+        },
+        {
+          "text": "Archive"
+        },
+        {
+          "text": "Assign"
+        },
+        {
+          "text": "Audit"
+        },
+        {
+          "text": "Backup"
+        },
+        {
+          "text": "Bind"
+        },
+        {
+          "text": "Block"
+        },
+        {
+          "text": "Call"
+        },
+        {
+          "text": "Change"
+        },
+        {
+          "text": "Check"
+        },
+        {
+          "text": "Clean"
+        },
+        {
+          "text": "Click"
+        },
+        {
+          "text": "Close"
+        },
+        {
+          "text": "Compare"
+        },
+        {
+          "text": "Compress"
+        },
+        {
+          "text": "Configure"
+        },
+        {
+          "text": "Connect"
+        },
+        {
+          "text": "Control"
+        },
+        {
+          "text": "Copy/Duplicate"
+        },
+        {
+          "text": "Create"
+        },
+        {
+          "text": "Decode"
+        },
+        {
+          "text": "Decompress"
+        },
+        {
+          "text": "Decrypt"
+        },
+        {
+          "text": "Deny"
+        },
+        {
+          "text": "Depress"
+        },
+        {
+          "text": "Detect"
+        },
+        {
+          "text": "Disconnect"
+        },
+        {
+          "text": "Download"
+        },
+        {
+          "text": "Draw"
+        },
+        {
+          "text": "Drop"
+        },
+        {
+          "text": "Encode"
+        },
+        {
+          "text": "Encrypt"
+        },
+        {
+          "text": "Enumerate"
+        },
+        {
+          "text": "Execute"
+        },
+        {
+          "text": "Extract"
+        },
+        {
+          "text": "Filter"
+        },
+        {
+          "text": "Find"
+        },
+        {
+          "text": "Flush"
+        },
+        {
+          "text": "Fork"
+        },
+        {
+          "text": "Free"
+        },
+        {
+          "text": "Get"
+        },
+        {
+          "text": "Hide"
+        },
+        {
+          "text": "Hook"
+        },
+        {
+          "text": "Impersonate"
+        },
+        {
+          "text": "Initialize"
+        },
+        {
+          "text": "Inject"
+        },
+        {
+          "text": "Install"
+        },
+        {
+          "text": "Interleave"
+        },
+        {
+          "text": "Join"
+        },
+        {
+          "text": "Kill"
+        },
+        {
+          "text": "Listen"
+        },
+        {
+          "text": "Load"
+        },
+        {
+          "text": "Lock"
+        },
+        {
+          "text": "Login/Logon"
+        },
+        {
+          "text": "Logout/Logoff"
+        },
+        {
+          "text": "Map"
+        },
+        {
+          "text": "Merge"
+        },
+        {
+          "text": "Modify"
+        },
+        {
+          "text": "Monitor"
+        },
+        {
+          "text": "Move"
+        },
+        {
+          "text": "Open"
+        },
+        {
+          "text": "Pack"
+        },
+        {
+          "text": "Pause"
+        },
+        {
+          "text": "Press"
+        },
+        {
+          "text": "Protect"
+        },
+        {
+          "text": "Quarantine"
+        },
+        {
+          "text": "Query"
+        },
+        {
+          "text": "Queue"
+        },
+        {
+          "text": "Raise"
+        },
+        {
+          "text": "Read"
+        },
+        {
+          "text": "Receive"
+        },
+        {
+          "text": "Release"
+        },
+        {
+          "text": "Remove/Delete"
+        },
+        {
+          "text": "Rename"
+        },
+        {
+          "text": "Replicate"
+        },
+        {
+          "text": "Restore"
+        },
+        {
+          "text": "Resume"
+        },
+        {
+          "text": "Revert"
+        },
+        {
+          "text": "Run"
+        },
+        {
+          "text": "Save"
+        },
+        {
+          "text": "Scan"
+        },
+        {
+          "text": "Schedule"
+        },
+        {
+          "text": "Search"
+        },
+        {
+          "text": "Send"
+        },
+        {
+          "text": "Set"
+        },
+        {
+          "text": "Shutdown"
+        },
+        {
+          "text": "Sleep"
+        },
+        {
+          "text": "Snapshot"
+        },
+        {
+          "text": "Start"
+        },
+        {
+          "text": "Stop"
+        },
+        {
+          "text": "Suspend"
+        },
+        {
+          "text": "Synchronize"
+        },
+        {
+          "text": "Throw"
+        },
+        {
+          "text": "Transmit"
+        },
+        {
+          "text": "Unblock"
+        },
+        {
+          "text": "Unhide"
+        },
+        {
+          "text": "Unhook"
+        },
+        {
+          "text": "Uninstall"
+        },
+        {
+          "text": "Unload"
+        },
+        {
+          "text": "Unlock"
+        },
+        {
+          "text": "Unmap"
+        },
+        {
+          "text": "Unpack"
+        },
+        {
+          "text": "Update"
+        },
+        {
+          "text": "Upgrade"
+        },
+        {
+          "text": "Upload"
+        },
+        {
+          "text": "Wipe/Destroy/Purge"
+        },
+        {
+          "text": "Write"
+        }
+      ]
+    },
+    {
+      "name": "BitnessEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/BitnessEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "32"
+        },
+        {
+          "text": "64"
+        }
+      ]
+    },
+    {
+      "name": "CharacterEncodingEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/CharacterEncodingEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "ASCII"
+        },
+        {
+          "text": "UTF-16"
+        },
+        {
+          "text": "UTF-32"
+        },
+        {
+          "text": "UTF-8"
+        },
+        {
+          "text": "Windows-1250"
+        },
+        {
+          "text": "Windows-1251"
+        },
+        {
+          "text": "Windows-1252"
+        },
+        {
+          "text": "Windows-1253"
+        },
+        {
+          "text": "Windows-1254"
+        },
+        {
+          "text": "Windows-1255"
+        },
+        {
+          "text": "Windows-1256"
+        },
+        {
+          "text": "Windows-1257"
+        },
+        {
+          "text": "Windows-1258"
+        }
+      ]
+    },
+    {
+      "name": "ContactAddressScopeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactAddressScopeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "home"
+        },
+        {
+          "text": "work"
+        },
+        {
+          "text": "school"
+        }
+      ]
+    },
+    {
+      "name": "ContactEmailScopeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactEmailScopeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "home"
+        },
+        {
+          "text": "work"
+        },
+        {
+          "text": "school"
+        },
+        {
+          "text": "cloud"
+        }
+      ]
+    },
+    {
+      "name": "ContactPhoneEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactPhoneEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "home"
+        },
+        {
+          "text": "work"
+        },
+        {
+          "text": "school"
+        },
+        {
+          "text": "mobile"
+        },
+        {
+          "text": "main"
+        },
+        {
+          "text": "home fax"
+        },
+        {
+          "text": "work fax"
+        },
+        {
+          "text": "pager"
+        }
+      ]
+    },
+    {
+      "name": "ContactSIPScopeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactSIPScopeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "home"
+        },
+        {
+          "text": "work"
+        },
+        {
+          "text": "school"
+        }
+      ]
+    },
+    {
+      "name": "ContactURLScopeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactURLScopeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "home"
+        },
+        {
+          "text": "work"
+        },
+        {
+          "text": "school"
+        },
+        {
+          "text": "homepage"
+        }
+      ]
+    },
+    {
+      "name": "DiskTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/DiskTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "CDRom"
+        },
+        {
+          "text": "Fixed"
+        },
+        {
+          "text": "RAMDisk"
+        },
+        {
+          "text": "Remote"
+        },
+        {
+          "text": "Removable"
+        }
+      ]
+    },
+    {
+      "name": "EndiannessTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/EndiannessTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Big-endian"
+        },
+        {
+          "text": "Little-endian"
+        },
+        {
+          "text": "Middle-endian"
+        }
+      ]
+    },
+    {
+      "name": "HashNameEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/HashNameEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "MD5"
+        },
+        {
+          "text": "MD6"
+        },
+        {
+          "text": "SHA1"
+        },
+        {
+          "text": "SHA224"
+        },
+        {
+          "text": "SHA256"
+        },
+        {
+          "text": "SHA384"
+        },
+        {
+          "text": "SHA512"
+        },
+        {
+          "text": "SSDEEP"
+        }
+      ]
+    },
+    {
+      "name": "LibraryTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/LibraryTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Dynamic"
+        },
+        {
+          "text": "Other"
+        },
+        {
+          "text": "Remote"
+        },
+        {
+          "text": "Shared"
+        },
+        {
+          "text": "Static"
+        }
+      ]
+    },
+    {
+      "name": "MemoryBlockTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/MemoryBlockTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Bit-mapped"
+        },
+        {
+          "text": "Byte-mapped"
+        },
+        {
+          "text": "Initialized"
+        },
+        {
+          "text": "Overlay"
+        },
+        {
+          "text": "Uninitialized"
+        }
+      ]
+    },
+    {
+      "name": "ObservableObjectRelationshipEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ObservableObjectRelationshipEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Allocated"
+        },
+        {
+          "text": "Allocated_By"
+        },
+        {
+          "text": "Attachment_Of"
+        },
+        {
+          "text": "Bound"
+        },
+        {
+          "text": "Bound_By"
+        },
+        {
+          "text": "Characterized_By"
+        },
+        {
+          "text": "Characterizes"
+        },
+        {
+          "text": "Child_Of"
+        },
+        {
+          "text": "Closed"
+        },
+        {
+          "text": "Closed_By"
+        },
+        {
+          "text": "Compressed"
+        },
+        {
+          "text": "Compressed_By"
+        },
+        {
+          "text": "Compressed_From"
+        },
+        {
+          "text": "Compressed_Into"
+        },
+        {
+          "text": "Connected_From"
+        },
+        {
+          "text": "Connected_To"
+        },
+        {
+          "text": "Contained_Within"
+        },
+        {
+          "text": "Contains"
+        },
+        {
+          "text": "Copied"
+        },
+        {
+          "text": "Copied_By"
+        },
+        {
+          "text": "Copied_From"
+        },
+        {
+          "text": "Copied_To"
+        },
+        {
+          "text": "Created"
+        },
+        {
+          "text": "Created_By"
+        },
+        {
+          "text": "Decoded"
+        },
+        {
+          "text": "Decoded_By"
+        },
+        {
+          "text": "Decompressed"
+        },
+        {
+          "text": "Decompressed_By"
+        },
+        {
+          "text": "Decrypted"
+        },
+        {
+          "text": "Decrypted_By"
+        },
+        {
+          "text": "Deleted"
+        },
+        {
+          "text": "Deleted_By"
+        },
+        {
+          "text": "Deleted_From"
+        },
+        {
+          "text": "Downloaded"
+        },
+        {
+          "text": "Downloaded_By"
+        },
+        {
+          "text": "Downloaded_From"
+        },
+        {
+          "text": "Downloaded_To"
+        },
+        {
+          "text": "Dropped"
+        },
+        {
+          "text": "Dropped_By"
+        },
+        {
+          "text": "Encoded"
+        },
+        {
+          "text": "Encoded_By"
+        },
+        {
+          "text": "Encrypted"
+        },
+        {
+          "text": "Encrypted_By"
+        },
+        {
+          "text": "Encrypted_From"
+        },
+        {
+          "text": "Encrypted_To"
+        },
+        {
+          "text": "Extracted_From"
+        },
+        {
+          "text": "FQDN_Of"
+        },
+        {
+          "text": "Freed"
+        },
+        {
+          "text": "Freed_By"
+        },
+        {
+          "text": "Had_Attachment"
+        },
+        {
+          "text": "Hooked"
+        },
+        {
+          "text": "Hooked_By"
+        },
+        {
+          "text": "Initialized_By"
+        },
+        {
+          "text": "Initialized_To"
+        },
+        {
+          "text": "Injected"
+        },
+        {
+          "text": "Injected_As"
+        },
+        {
+          "text": "Injected_By"
+        },
+        {
+          "text": "Injected_Into"
+        },
+        {
+          "text": "Installed"
+        },
+        {
+          "text": "Installed_By"
+        },
+        {
+          "text": "Joined"
+        },
+        {
+          "text": "Joined_By"
+        },
+        {
+          "text": "Killed"
+        },
+        {
+          "text": "Killed_By"
+        },
+        {
+          "text": "Listened_On"
+        },
+        {
+          "text": "Listened_On_By"
+        },
+        {
+          "text": "Loaded_From"
+        },
+        {
+          "text": "Loaded_Into"
+        },
+        {
+          "text": "Locked"
+        },
+        {
+          "text": "Locked_By"
+        },
+        {
+          "text": "Mapped_By"
+        },
+        {
+          "text": "Mapped_Into"
+        },
+        {
+          "text": "Merged"
+        },
+        {
+          "text": "Merged_By"
+        },
+        {
+          "text": "Modified_Properties_Of"
+        },
+        {
+          "text": "Monitored"
+        },
+        {
+          "text": "Monitored_By"
+        },
+        {
+          "text": "Moved"
+        },
+        {
+          "text": "Moved_By"
+        },
+        {
+          "text": "Moved_From"
+        },
+        {
+          "text": "Moved_To"
+        },
+        {
+          "text": "Opened"
+        },
+        {
+          "text": "Opened_By"
+        },
+        {
+          "text": "Packed"
+        },
+        {
+          "text": "Packed_By"
+        },
+        {
+          "text": "Packed_From"
+        },
+        {
+          "text": "Packed_Into"
+        },
+        {
+          "text": "Parent_Of"
+        },
+        {
+          "text": "Paused"
+        },
+        {
+          "text": "Paused_By"
+        },
+        {
+          "text": "Previously_Contained"
+        },
+        {
+          "text": "Properties_Modified_By"
+        },
+        {
+          "text": "Properties_Queried"
+        },
+        {
+          "text": "Properties_Queried_By"
+        },
+        {
+          "text": "Read_From"
+        },
+        {
+          "text": "Read_From_By"
+        },
+        {
+          "text": "Received"
+        },
+        {
+          "text": "Received_By"
+        },
+        {
+          "text": "Received_From"
+        },
+        {
+          "text": "Received_Via_Upload"
+        },
+        {
+          "text": "Redirects_To"
+        },
+        {
+          "text": "Related_To"
+        },
+        {
+          "text": "Renamed"
+        },
+        {
+          "text": "Renamed_By"
+        },
+        {
+          "text": "Renamed_From"
+        },
+        {
+          "text": "Renamed_To"
+        },
+        {
+          "text": "Resolved_To"
+        },
+        {
+          "text": "Resumed"
+        },
+        {
+          "text": "Resumed_By"
+        },
+        {
+          "text": "Root_Domain_Of"
+        },
+        {
+          "text": "Searched_For"
+        },
+        {
+          "text": "Searched_For_By"
+        },
+        {
+          "text": "Sent"
+        },
+        {
+          "text": "Sent_By"
+        },
+        {
+          "text": "Sent_To"
+        },
+        {
+          "text": "Sent_Via_Upload"
+        },
+        {
+          "text": "Set_From"
+        },
+        {
+          "text": "Set_To"
+        },
+        {
+          "text": "Sub-domain_Of"
+        },
+        {
+          "text": "Supra-domain_Of"
+        },
+        {
+          "text": "Suspended"
+        },
+        {
+          "text": "Suspended_By"
+        },
+        {
+          "text": "Unhooked"
+        },
+        {
+          "text": "Unhooked_By"
+        },
+        {
+          "text": "Unlocked"
+        },
+        {
+          "text": "Unlocked_By"
+        },
+        {
+          "text": "Unpacked"
+        },
+        {
+          "text": "Unpacked_By"
+        },
+        {
+          "text": "Uploaded"
+        },
+        {
+          "text": "Uploaded_By"
+        },
+        {
+          "text": "Uploaded_From"
+        },
+        {
+          "text": "Uploaded_To"
+        },
+        {
+          "text": "Used"
+        },
+        {
+          "text": "Used_By"
+        },
+        {
+          "text": "Values_Enumerated"
+        },
+        {
+          "text": "Values_Enumerated_By"
+        },
+        {
+          "text": "Written_To_By"
+        },
+        {
+          "text": "Wrote_To"
+        }
+      ]
+    },
+    {
+      "name": "ObservableObjectStateEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ObservableObjectStateEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Active"
+        },
+        {
+          "text": "Closed"
+        },
+        {
+          "text": "Does Not Exist"
+        },
+        {
+          "text": "Exists"
+        },
+        {
+          "text": "Inactive"
+        },
+        {
+          "text": "Locked"
+        },
+        {
+          "text": "Open"
+        },
+        {
+          "text": "Started"
+        },
+        {
+          "text": "Stopped"
+        },
+        {
+          "text": "Unlocked"
+        }
+      ]
+    },
+    {
+      "name": "PartitionTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/PartitionTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "PARTITION_ENTRY_UNUSED"
+        },
+        {
+          "text": "PARTITION_EXTENDED"
+        },
+        {
+          "text": "PARTITION_FAT32"
+        },
+        {
+          "text": "PARTITION_FAT32_XINT13"
+        },
+        {
+          "text": "PARTITION_FAT_12"
+        },
+        {
+          "text": "PARTITION_FAT_16"
+        },
+        {
+          "text": "PARTITION_HUGE"
+        },
+        {
+          "text": "PARTITION_IFS"
+        },
+        {
+          "text": "PARTITION_LDM"
+        },
+        {
+          "text": "PARTITION_NTFT"
+        },
+        {
+          "text": "PARTITION_OS2BOOTMGR"
+        },
+        {
+          "text": "PARTITION_PREP"
+        },
+        {
+          "text": "PARTITION_UNIX"
+        },
+        {
+          "text": "PARTITION_XENIX_1"
+        },
+        {
+          "text": "PARTITION_XENIX_2"
+        },
+        {
+          "text": "PARTITION_XINT13"
+        },
+        {
+          "text": "PARTITION_XINT13_EXTENDED"
+        },
+        {
+          "text": "UNKNOWN"
+        },
+        {
+          "text": "VALID_NTFT"
+        }
+      ]
+    },
+    {
+      "name": "ProcessorArchEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ProcessorArchEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "ARM"
+        },
+        {
+          "text": "Alpha"
+        },
+        {
+          "text": "IA-64"
+        },
+        {
+          "text": "MIPS"
+        },
+        {
+          "text": "Motorola 68k"
+        },
+        {
+          "text": "Other"
+        },
+        {
+          "text": "PowerPC"
+        },
+        {
+          "text": "SPARC"
+        },
+        {
+          "text": "eSi-RISC"
+        },
+        {
+          "text": "x86-32"
+        },
+        {
+          "text": "x86-64"
+        },
+        {
+          "text": "z/Architecture"
+        }
+      ]
+    },
+    {
+      "name": "RecoveredObjectStatusEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/RecoveredObjectStatusEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "recovered"
+        },
+        {
+          "text": "partially recovered"
+        },
+        {
+          "text": "overwritten"
+        },
+        {
+          "text": "unknown"
+        }
+      ]
+    },
+    {
+      "name": "RegionalRegistryTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/RegionalRegistryTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "APNIC"
+        },
+        {
+          "text": "ARIN"
+        },
+        {
+          "text": "AfriNIC"
+        },
+        {
+          "text": "LACNIC"
+        },
+        {
+          "text": "RIPE NCC"
+        }
+      ]
+    },
+    {
+      "name": "RegistryDatatypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/RegistryDatatypeEnum",
+      "description": "\"From https //learn.microsoft.com/en-us/windows/win32/sysinfo/registry-value-types, https //learn.microsoft.com/en-us/windows/win32/shell/hkey-type\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "reg_binary",
+          "description": "\"Binary data in any form.\""
+        },
+        {
+          "text": "reg_dword",
+          "description": "\"A 32-bit number.\""
+        },
+        {
+          "text": "reg_dword_big_endian",
+          "description": "\"A 32-bit number in big-endian format. Some UNIX systems support big-endian architectures.\""
+        },
+        {
+          "text": "reg_expand_sz",
+          "description": "\"A null-terminated string that contains unexpanded references to environment Variables (for example, '%PATH%'). It will be a Unicode or ANSI string depending on wh ether you use the Unicode or ANSI functions. To expand the environment variable refere nces, use the ExpandEnvironmentStrings function.\""
+        },
+        {
+          "text": "reg_full_resource_descriptor",
+          "description": "\"A list of hardware resources that a physical device is using, detected and written into the \\HardwareDescription tree by the system.\""
+        },
+        {
+          "text": "reg_invalid_type",
+          "description": "\"Specifies an invalid key.\""
+        },
+        {
+          "text": "reg_link",
+          "description": "\"A null-terminated Unicode string that contains the target path of a symboli c link that was created by calling the RegCreateKeyEx function with REG_OPTION_CREATE_ LINK.\""
+        },
+        {
+          "text": "reg_multi_sz",
+          "description": "\"A sequence of null-terminated strings, terminated by an empty string (\\0). The following is an example: String1\\0String2\\0String3\\0LastString\\0\\0 The first \\0 terminates the first string, the second to the last \\0 terminates the last string, and the final \\0 terminates the sequence. Note that the final terminator must be factored into the length of the string.\""
+        },
+        {
+          "text": "reg_none",
+          "description": "\"No defined value type.\""
+        },
+        {
+          "text": "reg_qword",
+          "description": "\"A 64-bit number.\""
+        },
+        {
+          "text": "reg_resource_list",
+          "description": "\"Device-driver resource list.\""
+        },
+        {
+          "text": "reg_resource_requirements_list",
+          "description": "\"A device driver's list of possible hardware resources it or one of the physical devices it controls can use, from which the system writes a subset into the \\ResourceMap tree\""
+        },
+        {
+          "text": "reg_sz",
+          "description": "\"A null-terminated string. This will be either a Unicode or an ANSI string, depending on whether you use the Unicode or ANSI functions.\""
+        }
+      ]
+    },
+    {
+      "name": "SIMFormEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/SIMFormEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Full-size SIM"
+        },
+        {
+          "text": "Micro SIM"
+        },
+        {
+          "text": "Nano SIM"
+        }
+      ]
+    },
+    {
+      "name": "SIMTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/SIMTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "SIM"
+        },
+        {
+          "text": "UICC"
+        },
+        {
+          "text": "USIM"
+        }
+      ]
+    },
+    {
+      "name": "TaskActionTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskActionTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "TASK_ACTION_COM_HANDLER"
+        },
+        {
+          "text": "TASK_ACTION_EXEC"
+        },
+        {
+          "text": "TASK_ACTION_SEND_EMAIL"
+        },
+        {
+          "text": "TASK_ACTION_SHOW_MESSAGE"
+        }
+      ]
+    },
+    {
+      "name": "TaskFlagEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskFlagEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "TASK_FLAG_DELETE_WHEN_DONE"
+        },
+        {
+          "text": "TASK_FLAG_DISABLED"
+        },
+        {
+          "text": "TASK_FLAG_DONT_START_IF_ON_BATTERIES"
+        },
+        {
+          "text": "TASK_FLAG_HIDDEN"
+        },
+        {
+          "text": "TASK_FLAG_INTERACTIVE"
+        },
+        {
+          "text": "TASK_FLAG_KILL_IF_GOING_ON_BATTERIES"
+        },
+        {
+          "text": "TASK_FLAG_KILL_ON_IDLE_END"
+        },
+        {
+          "text": "TASK_FLAG_RESTART_ON_IDLE_RESUME"
+        },
+        {
+          "text": "TASK_FLAG_RUN_IF_CONNECTED_TO_INTERNET"
+        },
+        {
+          "text": "TASK_FLAG_RUN_ONLY_IF_LOGGED_ON"
+        },
+        {
+          "text": "TASK_FLAG_START_ONLY_IF_IDLE"
+        },
+        {
+          "text": "TASK_FLAG_SYSTEM_REQUIRED"
+        },
+        {
+          "text": "TASK_FLAG_ZERO"
+        }
+      ]
+    },
+    {
+      "name": "TaskPriorityEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskPriorityEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "ABOVE_NORMAL_PRIORITY_CLASS"
+        },
+        {
+          "text": "BELOW_NORMAL_PRIORITY_CLASS"
+        },
+        {
+          "text": "HIGH_PRIORITY_CLASS"
+        },
+        {
+          "text": "IDLE_PRIORITY_CLASS"
+        },
+        {
+          "text": "NORMAL_PRIORITY_CLASS"
+        },
+        {
+          "text": "REALTIME_PRIORITY_CLASS"
+        }
+      ]
+    },
+    {
+      "name": "TaskStatusEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskStatusEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "SCHED_E_ACCOUNT_DBASE_CORRUPT"
+        },
+        {
+          "text": "SCHED_E_ACCOUNT_INFORMATION_NOT_SET"
+        },
+        {
+          "text": "SCHED_E_ACCOUNT_NAME_NOT_FOUND"
+        },
+        {
+          "text": "SCHED_E_CANNOT_OPEN_TASK"
+        },
+        {
+          "text": "SCHED_E_INVALID_TASK"
+        },
+        {
+          "text": "SCHED_E_NO_SECURITY_SERVICES"
+        },
+        {
+          "text": "SCHED_E_SERVICE_NOT_INSTALLED"
+        },
+        {
+          "text": "SCHED_E_SERVICE_NOT_RUNNING"
+        },
+        {
+          "text": "SCHED_E_TASK_NOT_READY"
+        },
+        {
+          "text": "SCHED_E_TASK_NOT_RUNNING"
+        },
+        {
+          "text": "SCHED_E_TRIGGER_NOT_FOUND"
+        },
+        {
+          "text": "SCHED_E_UNKNOWN_OBJECT_VERSION"
+        },
+        {
+          "text": "SCHED_E_UNSUPPORTED_ACCOUNT_OPTION"
+        },
+        {
+          "text": "SCHED_S_EVENT_TRIGGER"
+        },
+        {
+          "text": "SCHED_S_TASK_DISABLED"
+        },
+        {
+          "text": "SCHED_S_TASK_HAS_NOT_RUN"
+        },
+        {
+          "text": "SCHED_S_TASK_NOT_SCHEDULED"
+        },
+        {
+          "text": "SCHED_S_TASK_NO_MORE_RUNS"
+        },
+        {
+          "text": "SCHED_S_TASK_NO_VALID_TRIGGERS"
+        },
+        {
+          "text": "SCHED_S_TASK_READY"
+        },
+        {
+          "text": "SCHED_S_TASK_RUNNING"
+        },
+        {
+          "text": "SCHED_S_TASK_TERMINATED"
+        },
+        {
+          "text": "TASK_STATE_QUEUED"
+        },
+        {
+          "text": "TASK_STATE_UNKNOWN"
+        }
+      ]
+    },
+    {
+      "name": "ThreadRunningStatusEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ThreadRunningStatusEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Initialized"
+        },
+        {
+          "text": "Ready"
+        },
+        {
+          "text": "Running"
+        },
+        {
+          "text": "Standby"
+        },
+        {
+          "text": "Terminated"
+        },
+        {
+          "text": "Transition"
+        },
+        {
+          "text": "Unknown"
+        },
+        {
+          "text": "Waiting"
+        }
+      ]
+    },
+    {
+      "name": "TimestampPrecisionEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TimestampPrecisionEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "day"
+        },
+        {
+          "text": "hour"
+        },
+        {
+          "text": "minute"
+        },
+        {
+          "text": "month"
+        },
+        {
+          "text": "second"
+        },
+        {
+          "text": "year"
+        }
+      ]
+    },
+    {
+      "name": "TrendEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TrendEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Decreasing"
+        },
+        {
+          "text": "Increasing"
+        }
+      ]
+    },
+    {
+      "name": "TriggerFrequencyEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TriggerFrequencyEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "TASK_EVENT_TRIGGER_AT_LOGON"
+        },
+        {
+          "text": "TASK_EVENT_TRIGGER_AT_SYSTEMSTART"
+        },
+        {
+          "text": "TASK_EVENT_TRIGGER_ON_IDLE"
+        },
+        {
+          "text": "TASK_TIME_TRIGGER_DAILY"
+        },
+        {
+          "text": "TASK_TIME_TRIGGER_MONTHLYDATE"
+        },
+        {
+          "text": "TASK_TIME_TRIGGER_MONTHLYDOW"
+        },
+        {
+          "text": "TASK_TIME_TRIGGER_ONCE"
+        },
+        {
+          "text": "TASK_TIME_TRIGGER_WEEKLY"
+        }
+      ]
+    },
+    {
+      "name": "TriggerTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TriggerTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "TASK_TRIGGER_BOOT"
+        },
+        {
+          "text": "TASK_TRIGGER_EVENT"
+        },
+        {
+          "text": "TASK_TRIGGER_IDLE"
+        },
+        {
+          "text": "TASK_TRIGGER_LOGON"
+        },
+        {
+          "text": "TASK_TRIGGER_REGISTRATION"
+        },
+        {
+          "text": "TASK_TRIGGER_SESSION_STATE_CHANGE"
+        },
+        {
+          "text": "TASK_TRIGGER_TIME"
+        }
+      ]
+    },
+    {
+      "name": "URLTransitionTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/URLTransitionTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "link"
+        },
+        {
+          "text": "typed"
+        },
+        {
+          "text": "auto_bookmark"
+        },
+        {
+          "text": "auto_subframe"
+        },
+        {
+          "text": "manual_subframe"
+        },
+        {
+          "text": "generated"
+        },
+        {
+          "text": "auto_toplevel"
+        },
+        {
+          "text": "form_submit"
+        },
+        {
+          "text": "reload"
+        },
+        {
+          "text": "keyword"
+        },
+        {
+          "text": "keyword_generated"
+        }
+      ]
+    },
+    {
+      "name": "UnixProcessStateEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/UnixProcessStateEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Dead"
+        },
+        {
+          "text": "InterruptibleSleep"
+        },
+        {
+          "text": "Paging"
+        },
+        {
+          "text": "Running"
+        },
+        {
+          "text": "Stopped"
+        },
+        {
+          "text": "UninterruptibleSleep"
+        },
+        {
+          "text": "Zombie"
+        }
+      ]
+    },
+    {
+      "name": "WhoisContactTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WhoisContactTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "ADMIN"
+        },
+        {
+          "text": "BILLING"
+        },
+        {
+          "text": "TECHNICAL"
+        }
+      ]
+    },
+    {
+      "name": "WhoisDNSSECTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WhoisDNSSECTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Signed"
+        },
+        {
+          "text": "Unsigned"
+        }
+      ]
+    },
+    {
+      "name": "WhoisStatusTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WhoisStatusTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "ADD_PERIOD"
+        },
+        {
+          "text": "AUTO_RENEW_PERIOD"
+        },
+        {
+          "text": "CLIENT_DELETE_PROHIBITED"
+        },
+        {
+          "text": "CLIENT_HOLD"
+        },
+        {
+          "text": "CLIENT_RENEW_PROHIBITED"
+        },
+        {
+          "text": "CLIENT_TRANSFER_PROHIBITED"
+        },
+        {
+          "text": "CLIENT_UPDATE_PROHIBITED"
+        },
+        {
+          "text": "DELETE_PROHIBITED"
+        },
+        {
+          "text": "HOLD"
+        },
+        {
+          "text": "INACTIVE"
+        },
+        {
+          "text": "OK"
+        },
+        {
+          "text": "PENDING_DELETE_RESTORABLE"
+        },
+        {
+          "text": "PENDING_DELETE_SCHEDULED_FOR_RELEASE"
+        },
+        {
+          "text": "PENDING_RESTORE"
+        },
+        {
+          "text": "RENEW_PERIOD"
+        },
+        {
+          "text": "RENEW_PROHIBITED"
+        },
+        {
+          "text": "TRANSFER_PERIOD"
+        },
+        {
+          "text": "TRANSFER_PROHIBITED"
+        },
+        {
+          "text": "UPDATE_PROHIBITED"
+        }
+      ]
+    },
+    {
+      "name": "WindowsDriveTypeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WindowsDriveTypeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "DRIVE_CDROM"
+        },
+        {
+          "text": "DRIVE_FIXED"
+        },
+        {
+          "text": "DRIVE_NO_ROOT_DIR"
+        },
+        {
+          "text": "DRIVE_RAMDISK"
+        },
+        {
+          "text": "DRIVE_REMOTE"
+        },
+        {
+          "text": "DRIVE_REMOVABLE"
+        },
+        {
+          "text": "DRIVE_UNKNOWN"
+        }
+      ]
+    },
+    {
+      "name": "WindowsVolumeAttributeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WindowsVolumeAttributeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "Hidden"
+        },
+        {
+          "text": "NoDefaultDriveLetter"
+        },
+        {
+          "text": "ReadOnly"
+        },
+        {
+          "text": "ShadowCopy"
+        }
+      ]
+    },
+    {
+      "name": "WirelessNetworkSecurityModeEnum",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WirelessNetworkSecurityModeEnum",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "permissible_values": [
+        {
+          "text": "None"
+        },
+        {
+          "text": "WEP"
+        },
+        {
+          "text": "WPA"
+        },
+        {
+          "text": "WPA2-PSK"
+        },
+        {
+          "text": "WPA2-Enterprise"
+        },
+        {
+          "text": "WPA3-PSK"
+        },
+        {
+          "text": "WPA3-Enterprise"
+        }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "name": "AccountTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/AccountTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Account Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/AccountTypeVocab",
+      "range": "AccountTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ActionArgumentNameVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionArgumentNameVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Action Argument Name Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary for common arguments of cyber actions.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionArgumentNameVocab",
+      "range": "ActionArgumentNameEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ActionNameVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionNameVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Action Name Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of common specific cyber action names.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionNameVocab",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ActionRelationshipTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionRelationshipTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Action Relationship Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary for capturing types of relationships between actions.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionRelationshipTypeVocab",
+      "range": "ActionRelationshipTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ActionStatusTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionStatusTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Action Status Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of action status types.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionStatusTypeVocab",
+      "range": "ActionStatusTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ActionTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Action Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of common general action types.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ActionTypeVocab",
+      "range": "ActionTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "BitnessVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/BitnessVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Bitness Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of word sizes that define classes of operating systems.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/BitnessVocab",
+      "range": "BitnessEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "CharacterEncodingVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/CharacterEncodingVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Character Encoding Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of character encodings.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/CharacterEncodingVocab",
+      "range": "CharacterEncodingEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ContactAddressScopeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactAddressScopeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Contact Address Scope Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of scopes for address entries of digital contacts.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactAddressScopeVocab",
+      "range": "ContactAddressScopeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ContactEmailScopeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactEmailScopeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Contact Email Scope Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of scopes for email entries of digital contacts.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactEmailScopeVocab",
+      "range": "ContactEmailScopeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ContactPhoneScopeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactPhoneScopeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Contact Phone Scope Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of scopes for phone entries of digital contacts.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactPhoneScopeVocab",
+      "range": "ContactPhoneEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ContactSIPScopeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactSIPScopeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Contact SIP Scope Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of scopes for Session Initiation Protocol (SIP) entries of digital contacts.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactSIPScopeVocab",
+      "range": "ContactSIPScopeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ContactURLScopeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactURLScopeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Contact URL Scope Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of scopes for URL entries of digital contacts.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ContactURLScopeVocab",
+      "range": "ContactURLScopeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "DiskTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/DiskTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Disk Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of disk types.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/DiskTypeVocab",
+      "range": "DiskTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "EndiannessTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/EndiannessTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Endianness Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of byte ordering methods.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/EndiannessTypeVocab",
+      "range": "EndiannessTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "HashNameVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/HashNameVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Hash Name Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of hashing algorithm names.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/HashNameVocab",
+      "range": "HashNameEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "LibraryTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/LibraryTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Library Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of library types.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/LibraryTypeVocab",
+      "range": "LibraryTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "MemoryBlockTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/MemoryBlockTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Memory Block Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of types of memory blocks.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/MemoryBlockTypeVocab",
+      "range": "MemoryBlockTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ObservableObjectRelationshipVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ObservableObjectRelationshipVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Cyber Item Relationship Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of inter-observable object relationships.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ObservableObjectRelationshipVocab",
+      "range": "ObservableObjectRelationshipEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ObservableObjectStateVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ObservableObjectStateVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Cyber Item State Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of observable object states.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ObservableObjectStateVocab",
+      "range": "ObservableObjectStateEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "PartitionTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/PartitionTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Partition Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of partition types. See http://www.win.tue.nl/~aeb/partitions/partition_types-1.html for more information about the various partition types.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/PartitionTypeVocab",
+      "range": "PartitionTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ProcessorArchVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ProcessorArchVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Processor Architecture Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of computer processor architectures.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ProcessorArchVocab",
+      "range": "ProcessorArchEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "RecoveredObjectStatusVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/RecoveredObjectStatusVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Recovered Object Status Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines the vocabulary for Recovered Object status of data.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/RecoveredObjectStatusVocab",
+      "range": "RecoveredObjectStatusEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "RegionalRegistry_typeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/RegionalRegistry_typeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Regional Registry Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of Regional Internet Registries (RIRs) names, represented via their respective acronyms.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/RegionalRegistry_typeVocab",
+      "range": "RegionalRegistryTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "RegistryDatatypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/RegistryDatatypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Registry Datatype Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/RegistryDatatypeVocab",
+      "range": "RegistryDatatypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "SIMFormVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/SIMFormVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "SIM Form Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of common SIM card form factors.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/SIMFormVocab",
+      "range": "SIMFormEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "SIMTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/SIMTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "SIM Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of common SIM card types.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/SIMTypeVocab",
+      "range": "SIMTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TaskActionTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskActionTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Task Action Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of task action types. See also: http://msdn.microsoft.com/en-us/library/windows/desktop/aa380596(v=vs.85).aspx.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskActionTypeVocab",
+      "range": "TaskActionTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TaskFlagVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskFlagVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Task Flag Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of the run flags for a task scheduler task. See also: http://msdn.microsoft.com/en-us/library/windows/desktop/aa381283(v=vs.85).aspx See Also: http://msdn.microsoft.com/en-us/library/microsoft.office.excel.server.addins.computecluster.taskscheduler.taskflags(v=office.12).aspx.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskFlagVocab",
+      "range": "TaskFlagEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TaskPriorityVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskPriorityVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Task Priority Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of the priority levels of task scheduler tasks. See also: http://msdn.microsoft.com/en-us/library/windows/desktop/aa383512(v=vs.85).aspx.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskPriorityVocab",
+      "range": "TaskPriorityEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TaskStatusVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskStatusVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Task Status Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of the possible statuses of a scheduled task. See also: http://msdn.microsoft.com/en-us/library/windows/desktop/aa383604(v=vs.85).aspx See also: http://msdn.microsoft.com/en-us/library/windows/desktop/aa381263(v=vs.85).aspx See also: http://msdn.microsoft.com/en-us/library/windows/desktop/aa381833(v=vs.85).aspx See also: http://msdn.microsoft.com/en-us/library/windows/desktop/aa383617(v=vs.85).aspx.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/TaskStatusVocab",
+      "range": "TaskStatusEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ThreadRunningStatusVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/ThreadRunningStatusVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Thread Running Status Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of the various states that a thread may be in before, during, or after execution. See http://msdn.microsoft.com/en-us/library/system.diagnostics.threadstate(v=vs.110).aspx.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/ThreadRunningStatusVocab",
+      "range": "ThreadRunningStatusEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TimestampPrecisionVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TimestampPrecisionVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Timestamp Precision Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of timestamp precision granularities.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/TimestampPrecisionVocab",
+      "range": "TimestampPrecisionEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TrendVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TrendVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Trend Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of trend values.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/TrendVocab",
+      "range": "TrendEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TriggerFrequencyVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TriggerFrequencyVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Trigger Frequency Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of the frequency types that a trigger may use. See also: http://msdn.microsoft.com/en-us/library/windows/desktop/aa383620(v=vs.85).aspx and http://msdn.microsoft.com/en-us/library/windows/desktop/aa383987(v=vs.85).aspx.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/TriggerFrequencyVocab",
+      "range": "TriggerFrequencyEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TriggerTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/TriggerTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Trigger Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of the types of triggers associated with a task.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/TriggerTypeVocab",
+      "range": "TriggerTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "URLTransitionTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/URLTransitionTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "URL Transition Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of types of URL transitions.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/URLTransitionTypeVocab",
+      "range": "URLTransitionTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "UnixProcessStateVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/UnixProcessStateVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "UNIX Process State Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of Unix process states\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/UnixProcessStateVocab",
+      "range": "UnixProcessStateEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "WhoisContactTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WhoisContactTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Whois Contact Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of types of registrar contacts listed in a whois entry.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/WhoisContactTypeVocab",
+      "range": "WhoisContactTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "WhoisDNSSECTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WhoisDNSSECTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Whois DNSSEC Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of acceptable values for the DNSSEC field in a Whois entry.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/WhoisDNSSECTypeVocab",
+      "range": "WhoisDNSSECTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "WhoisStatusTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WhoisStatusTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Whois Status Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of all valid statuses for a domain within a whois entry.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/WhoisStatusTypeVocab",
+      "range": "WhoisStatusTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "WindowsDriveTypeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WindowsDriveTypeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Windows Drive Type Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of possible drive types, as enumerated by the WINAPI GetDriveType function: http://msdn.microsoft.com/en-us/library/windows/desktop/aa364939(v=vs.85).aspx.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/WindowsDriveTypeVocab",
+      "range": "WindowsDriveTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "WindowsVolumeAttributeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WindowsVolumeAttributeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Windows Volume Attribute Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of attributes that may be returned by the diskpart attributes command: http://technet.microsoft.com/en-us/library/cc766465(v=ws.10).aspx.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/WindowsVolumeAttributeVocab",
+      "range": "WindowsVolumeAttributeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "WirelessNetworkSecurityModeVocab",
+      "definition_uri": "https://w3id.org/lmodel/uco-vocabulary/WirelessNetworkSecurityModeVocab",
+      "local_names": [
+        {
+          "local_name_source": "owl",
+          "local_name_value": "Wireless Network Security Mode Vocabulary",
+          "@type": "LocalName"
+        }
+      ],
+      "description": "\"Defines an open-vocabulary of security modes that may be configured for wireless network connections.\"",
+      "from_schema": "https://w3id.org/lmodel/ucolink-vocabulary",
+      "slot_uri": "https://w3id.org/lmodel/uco-vocabulary/WirelessNetworkSecurityModeVocab",
+      "range": "WirelessNetworkSecurityModeEnum",
+      "@type": "SlotDefinition"
+    }
+  ],
+  "metamodel_version": "1.7.0",
+  "source_file": "uco_vocabulary.yaml",
+  "source_file_date": "2023-03-14T20:59:22",
+  "source_file_size": 33891,
+  "generation_date": "2023-03-17T20:22:07",
+  "@type": "SchemaDefinition",
+  "@context": [
+    "project/jsonld/uco_vocabulary.context.jsonld",
+    "https://w3id.org/linkml/types.context.jsonld",
+    {
+      "@base": "https://w3id.org/lmodel/uco-vocabulary/"
+    }
+  ]
+}

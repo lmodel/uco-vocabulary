@@ -1,0 +1,6 @@
+{
+   "linkml": "https://w3id.org/linkml/",
+   "lm_core": "https://w3id.org/lmodel/core/",
+   "schema_core": "https://w3id.org/lmodel/uco-core/schema/",
+   "vocabulary": "https://w3id.org/lmodel/uco-vocabulary/"
+}
