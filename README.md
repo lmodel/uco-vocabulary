@@ -1,6 +1,6 @@
 # uco-vocabulary
 
-Classes and Projects representing vocabularies in Unified Cyber Ontology
+Unofficial [https://linkml.io](Linkml schema), Classes and Properties characterizing vocabularies, in [https://unifiedcyberontology.org/](Unified Cyber Ontology)
 
 ## Website
 
