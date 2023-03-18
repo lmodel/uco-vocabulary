@@ -1,5 +1,5 @@
 # uco-vocabulary
 
-Unofficial [https://linkml.io](Linkml schema), Classes and Properties characterizing vocabularies, in [https://unifiedcyberontology.org/](Unified Cyber Ontology) 1.1.0
+Unofficial [Linkml schema](https://linkml.io), Classes and Properties characterizing vocabularies, in [Unified Cyber Ontology](https://unifiedcyberontology.org/) 1.1.0
 
 
