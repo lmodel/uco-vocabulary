@@ -26,7 +26,6 @@ prefixes:
   lm_core: 'https://w3id.org/lmodel/core/'
 
   vocabulary: 'https://w3id.org/lmodel/uco-vocabulary/'
-  schema_core: 'https://w3id.org/lmodel/uco-core/schema/'
 
 default_prefix: vocabulary
 default_range: string
